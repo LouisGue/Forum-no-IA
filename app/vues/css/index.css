@@ -1,0 +1,56 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+:root {
+    --canvas: #0A0D12; /* app background */
+    --surface: #10141C; /* panels */
+    --fg:#E8EDF6; /* text color */
+}
+
+body {
+    background: var(--canvas);
+    color: var(--fg);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background: pink;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: magenta;
+}
+
+.navbar_links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.navbar_links a {
+    color: red;
+    text-decoration: none;
+}
+
+.navbar_links a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.navbar_button{
+    background-color: darkgrey;
+    width: 20%;
+    height: 90%;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 25px;
+}
+
+
+
+
