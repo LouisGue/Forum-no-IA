@@ -1,0 +1,103 @@
+
+/* === Base Button === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+    padding: 0.75rem 1.5rem;
+
+    background-color: var(--primary);
+    color: var(--fg);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    min-height: 40px;
+    width: auto;
+    border: none;
+    border-radius: 11px;
+
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* === Hover === */
+.btn:hover {
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow-primary);
+}
+
+/* === Focus === */
+.btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* === Animated Arrow === */
+.btn--arrow::after {
+    content: "↗";
+    display: inline-block;
+
+    line-height: 1;
+    font-size: 1rem;
+    vertical-align: middle;
+
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    transition:
+        max-width 0.2s ease,
+        opacity 0.2s ease,
+        margin-left 0.2s ease;
+}
+
+.btn--arrow:hover::after,
+.btn--arrow:focus-visible::after {
+    max-width: 1em;
+    margin-left: 8px;
+    opacity: 1;
+}
+
+/* === Variants === */
+.btn--secondary {
+    background-color: var(--surface-2);
+    color: var(--fg);
+    border: 1px solid var(--border);
+}
+
+.btn--secondary:hover {
+    background-color: var(--surface);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--danger {
+    background-color: var(--danger);
+}
+
+.btn--danger:hover {
+    background-color: #DC2626;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* === Sizes === */
+.btn--sm {
+    min-height: 32px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.btn--lg {
+    min-height: 48px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
